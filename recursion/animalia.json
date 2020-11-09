@@ -1,0 +1,178 @@
+{
+  "data": {
+    "taxo_group": "_animalia_",
+    "taxo_name": "animalia",
+    "tree": {
+      "animalia": {
+        "label": "Animalia",
+        "path": "animalia",
+        "coelenterata": {
+          "label": "Coelenterata",
+          "path": "animalia.coelenterata",
+          "hydrozoa": {
+            "label": "Coelenterata",
+            "path": "animalia.coelenterata.hydrozoa",
+            "hydra": {
+              "path": "animalia.coelenterata.hydrozoa.hydra",
+              "label": "Hydra"
+            },
+            "physalia": {
+              "path": "animalia.coelenterata.hydrozoa.physalia",
+              "label": "Physalia"
+            }
+          },
+          "scyphozoa": {
+            "label": "Scyphozoa",
+            "path": "animalia.coelenterata.scyphozoa",
+            "aurelia": {
+              "path": "animalia.coelenterata.scyphozoa.aurelia",
+              "label": "Aurelia"
+            }
+          },
+          "anthozoa": {
+            "label": "Anthozoa",
+            "path": "animalia.coelenterata.anthozoa",
+            "meandrina": {
+              "path": "animalia.coelenterata.anthozoa.meandrina",
+              "label": "Meandrina"
+            },
+            "adamsia": {
+              "path": "animalia.coelenterata.anthozoa.adamsia",
+              "label": "Adamsia"
+            }
+          }
+        },
+        "platyhelminthes": {
+          "label": "platyhelminthes",
+          "path": "animalia.platyhelminthes",
+          "turbellaria": {
+            "path": "animalia.platyhelminthes.turbellaria",
+            "label": "Turbellaria",
+            "planeria": {
+              "path": "animalia.platyhelminthes.planeria",
+              "label": "Planeria"
+            },
+            "tricladida": {
+              "path": "animalia.platyhelminthes.tricladida",
+              "label": "Tricladida"
+            }
+          },
+          "trematoda": {
+            "path": "animalia.platyhelminthes.trematoda",
+            "label": "Trematoda",
+            "digenea": {
+              "path": "animalia.platyhelminthes.trematoda.digenea",
+              "label": "Digenea"
+            },
+            "paragonimus": {
+              "path": "animalia.platyhelminthes.trematoda.paragonimus",
+              "label": "Paragonimus"
+            }
+          },
+          "cestoda": {
+            "path": "animalia.platyhelminthes.cestoda",
+            "label": "Cestoda",
+            "taenia": {
+              "path": "animalia.platyhelminthes.cestoda.taenia",
+              "label": "Taenia"
+            },
+            "taenia_saginata": {
+              "path": "animalia.platyhelminthes.cestoda.taenia_saginata",
+              "label": "Taenia_saginata"
+            }
+          }
+        },
+        "annelida": {
+          "path": "animalia.annelida",
+          "label": "Annelida",
+          "earthworm": {
+            "path": "animalia.annelida.earthworm",
+            "label": "Earthworm"
+          },
+          "leeches": {
+            "path": "animalia.annelida.leeches",
+            "label": "Leeches"
+          },
+          "lugworms": {
+            "path": "animalia.annelida.lugworms",
+            "label": "Lugworms"
+          }
+        },
+        "mollusca": {
+          "label": "Mollusca",
+          "path": "animalia.mollusca",
+          "bivalvia": {
+            "path": "animalia.mollusca.bivalvia",
+            "label": "Bivalvia"
+          },
+          "gastropoda": {
+            "path": "animalia.mollusca.gastropoda",
+            "label": "Gastropoda",
+            "nudibranch": {
+              "path": "animalia.mollusca.gastropoda.nudibranch",
+              "label": "Nudibranch"
+            },
+            "apple_snails": {
+              "path": "animalia.mollusca.gastropoda.apple_snails",
+              "label": "Apple_snails"
+            }
+          },
+          "cephalopoda": {
+            "path": "animalia.mollusca.cephalopoda",
+            "label": "Cephalopoda",
+            "octopus": {
+              "path": "animalia.mollusca.cephalopoda.octopus",
+              "label": "Octopus"
+            },
+            "squid": {
+              "path": "animalia.mollusca.cephalopoda.squid",
+              "label": "Squid"
+            }
+          }
+        },
+        "echinodermata": {
+          "label": "Echinodermata",
+          "path": "animalia.echinodermata",
+          "asteroidea": {
+            "label": "Asteroidea",
+            "path": "animalia.echinodermata.asteroidea",
+            "choriaster": {
+              "path": "animalia.echinodermata.asteroidea.choriaster",
+              "label": "Choriaster"
+            },
+            "valvatida": {
+              "path": "animalia.echinodermata.asteroidea.valvatida",
+              "label": "Valvatida"
+            }
+          },
+          "ophiuroidea": {
+            "label": "Ophiuroidea",
+            "path": "animalia.ophiuroidea",
+            "basket_stars": {
+              "path": "animalia.echinodermata.ophiuroidea.basket_stars",
+              "label": "Basket_stars"
+            },
+            "ophiurida": {
+              "path": "animalia.echinodermata.ophiuroidea.ophiurida",
+              "label": "Ophiurida"
+            }
+          },
+          "echinoidea": {
+            "label": "Echinoidea",
+            "path": "animalia.echinoidea",
+            "sand_dollar": {
+              "path": "animalia.echinodermata.echinoidea.sand_dollar",
+              "label": "Sand_dollar"
+            },
+            "echinoida": {
+              "path": "animalia.echinodermata.echinoidea.echinoida",
+              "label": "Echinoida"
+            }
+          }
+        }
+      }
+    },
+    "taxo_id": null
+  },
+  "success": true
+}
