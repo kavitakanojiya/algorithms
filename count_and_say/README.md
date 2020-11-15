@@ -7,8 +7,6 @@ To determine how you "say" a digit string, split it into the **minimal** number 
 
 For example, the saying and conversion for digit string ```"3322251"```:
 
-```3322251```
-
 i.e. ```two 3's, three 2's, one 5, and one 1```
 
 i.e. ``` 2 3 + 3 2 + 1 5 + 1 1```
