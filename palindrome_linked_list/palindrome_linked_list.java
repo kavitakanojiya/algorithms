@@ -31,25 +31,15 @@ class Solution {
         // 4.1 Determine size of the list
         int arrayLength = arrayList.size();
 
-        // 4.2 Assume isMatch to be true
-        // If the input array is empty, no other computation will be required
-        boolean isMatch = true;
-
-        // 4.3 Iterate over the list from 0 through halfway
+        // 4.2 Iterate over the list from 0 through halfway
+        // and compare elements from front and back
         for(int i = 0; i < arrayLength/2; i++) {
-            // 4.3.1 `.equals` ensures negative numbers are compared
-            if(arrayList.get(i).equals(arrayList.get(arrayLength - i - 1))) {
-                isMatch = true;
-            } else {
-                isMatch = false;
-            }
-
-            // 4.3.2 If, at any position, numbers do not match, skip the loop
-            if(isMatch == false) {
-                break;
+            // 4.2.1 `.equals` ensures negative numbers are compared
+            if(!arrayList.get(i).equals(arrayList.get(arrayLength - i - 1))) {
+                return false;
             }
         }
 
-        return isMatch;
+        return true;
     }
 }
