@@ -27,3 +27,30 @@ end
 
 klass = FlattenTree.new
 klass.process
+
+
+# Parse Tree Using Recursion
+# ```ruby
+# klass = TaxonomyKeywordsProcessor.new
+# klass.process
+
+# OUTPUT:
+
+# {
+#    "animalia.coelenterata.hydrozoa.hydra":{
+#       "path":"animalia.coelenterata.hydrozoa.hydra",
+#       "label":"Hydra",
+#       "tk_id":"90c9ff90c94ced4b85b9f5ca37779e42"
+#    },
+#    "animalia.coelenterata.hydrozoa.physalia":{
+#       "path":"animalia.coelenterata.hydrozoa.physalia",
+#       "label":"Physalia",
+#       "tk_id":"90c9ff90c94ced4b85b9f5ca37779e42"
+#    },
+#    "animalia.coelenterata.scyphozoa.aurelia":{
+#       "path":"animalia.coelenterata.scyphozoa.aurelia",
+#       "label":"Aurelia",
+#       "tk_id":"9e4187ac92d86dd04ce80678d3a73c40"
+#    }
+# }
+# ```

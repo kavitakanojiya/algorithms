@@ -41,3 +41,42 @@ BinaryConversion::StartWith0.new(number: 100).convert
 OUTPUT:
 [1, 0, 0, 1]
 ```
+
+# Abstract Syntax Tree
+```ruby
+Parser.parse("id,post_title,comments(message)")
+
+OUTPUT:
+{
+  :type => :root,
+  :fields => [
+    [0] {
+      :type => :simple,
+      :name => "id"
+    },
+    [1] {
+      :type => :simple,
+      :name => "post_title"
+    },
+    [2] {
+      :type => :relationship,
+      :name => "comments",
+      :fields => [
+        [0] {
+          :type => :simple,
+          :name => "message"
+        }
+      ]
+    }
+  ]
+}
+```
+
+
+```ruby
+Parser.parse("id,post_title,comments(")
+
+OUTPUT:
+Throws:
+`block in parse': Parentheses were not closed. Parser detected the syntax error (ParserError)
+```
