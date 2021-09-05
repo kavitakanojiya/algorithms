@@ -1,3 +1,10 @@
+# Implementing max heap #
+
+# array = [6, 4, 5, 3, 2, 0, 1]
+# array = [8,7,4,3,1]
+# array = [10, 8, 7, 6, 4, 5, 3, 2, 0, 1]
+array = [100, 80, 70, 60, 40, 50, 30, 20, 0, 10]
+
 # Attempt #1
 # def call_to_graph():
 #   array = [None, 6, 4, 5, 3, 2, 0, 1]
@@ -36,7 +43,6 @@
 
 # Attempt #3
 def call_to_graph():
-  array = [6, 4, 5, 3, 2, 0, 1]
   current_level = 0
   index = 0
 
@@ -48,6 +54,4 @@ def call_to_graph():
     if index >= len(array):
       break
 
-call_to_graph()
-
-# Time complexity = log2(N) = 2.8 =~ 3
+call_to_graph() # Time complexity = log2(N) = 2.8 =~ 3
