@@ -5,12 +5,19 @@ class MaxHeap:
   def insert(self, element):
     """
     When invoked, inserts a new element to the heap and rebalances to maintain the property of the max heap.
-    Every insertion takes O(logN) time to rebalance.
+    Every insert takes O(logN) time to rebalance.
 
     Insert happens from the leaf node where the new element is added
     """
+
+    # Append the new element to the array
     self.array.append(element)
-    self.insert_heapify(len(self.array)-1, len(self.array))
+    length = len(self.array)
+
+    # Terminate if the array has only 1 element
+    if(length == 1):
+      return
+    self.insert_heapify(length-1, length)
 
   def delete(self):
     """
@@ -55,16 +62,18 @@ class MaxHeap:
        2.3 If the parent is greater than the new element, stop the iteration
     3. Perform #2 recursively
     """
-    if(length == 1):
-      return
 
+    # Terminate if the current position less than 0
     if(new_element_position == 0):
       return
 
+    # Compute position of its immediate parent
     parent_position = (new_element_position - 1) // 2
 
+    # Swap if the current element is smaller than the parent
     if(self.array[parent_position] < self.array[new_element_position]):
       self.array[parent_position], self.array[new_element_position] = self.array[new_element_position], self.array[parent_position]
+      # Perform this recursively until the root node so the heap is balanced
       self.insert_heapify(parent_position, length)
 
   def delete_heapify(self, current_position, length):
@@ -97,18 +106,16 @@ class MaxHeap:
     if(left < length and self.array[largest] < self.array[left]):
       largest = left
 
-    # Considers the right child as the largest if it is greater than the left element i.e. computed right above
+    # Considers the right child as the largest if it is greater than the left element
     if(right < length and self.array[largest] < self.array[right]):
       largest = right
-
-    print('Post Left: {}; Right: {}; Largest: {}; Length: {}'.format(left, right, largest, length))
 
     # Swap with the current element with the child only if the child is greater
     self.array[largest], self.array[current_position] = self.array[current_position], self.array[largest]
     # Iterate recursively until it stops
     self.delete_heapify(largest, length)
 
-# Attempt #1 #
+# Sample #1 #
 def data1():
   klass = MaxHeap()
   klass.insert(80)
@@ -125,10 +132,12 @@ def data1():
 
   print('Max element from the heap', klass.max())
 
+  klass.tree()
+
   klass.delete()
   print('Final array after a delete/s:', klass.array)
 
-# Attempt #2 #
+# Sample #2 #
 def data2():
   klass = MaxHeap()
   klass.insert(3)
@@ -138,25 +147,11 @@ def data2():
 
   print('Max element from the heap', klass.max())
 
+  klass.tree()
+
   klass.delete()
   print('Printing final array delete/s:', klass.array)
 
-# Attempt #3 #
-def data3():
-  klass = MaxHeap()
-  klass.insert(80)
-  klass.insert(70)
-  klass.insert(100)
-  klass.insert(0)
-  klass.insert(40)
-  klass.insert(50)
-  klass.insert(30)
-  klass.insert(20)
-  klass.insert(60)
-  klass.insert(10)
-
-  klass.tree()
-
-# data1();
-# data2();
-data3();
+data1();
+print('\n');
+data2();
