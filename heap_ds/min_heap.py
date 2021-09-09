@@ -48,7 +48,7 @@ class MinHeap():
     Returns the min element from the heap which is the root node.
     Finding the min element takes O(1) time.
     """
-    self.array[0]
+    return self.array[0]
 
   def delete_heapify(self, current_position, length):
     """
@@ -116,38 +116,38 @@ class MinHeap():
       # Perform this recursively until the root node so the heap is balanced
       self.insert_heapify(parent, length)
 
-def data1():
-  klass = MinHeap()
-  klass.insert(3)
-  klass.insert(1)
-  klass.insert(2)
-  klass.insert(0)
-  klass.insert(-1)
-  print('Array after all inserts:', klass.array)
+# def data1():
+#   klass = MinHeap()
+#   klass.insert(3)
+#   klass.insert(1)
+#   klass.insert(2)
+#   klass.insert(0)
+#   klass.insert(-1)
+#   print('Array after all inserts:', klass.array)
 
-  print('Minimum element:', klass.min())
+#   print('Minimum element:', klass.min())
 
-  klass.tree()
+#   klass.tree()
 
-  klass.delete()
-  print('Array after delete/s:', klass.array)
+#   klass.delete()
+#   print('Array after delete/s:', klass.array)
 
-def data2():
-  klass = MinHeap()
-  klass.insert(5)
-  klass.insert(10)
-  klass.insert(9)
-  klass.insert(8)
-  klass.insert(7)
-  print('Array after all inserts:', klass.array)
+# def data2():
+#   klass = MinHeap()
+#   klass.insert(5)
+#   klass.insert(10)
+#   klass.insert(9)
+#   klass.insert(8)
+#   klass.insert(7)
+#   print('Array after all inserts:', klass.array)
 
-  print('Minimum element:', klass.min())
+#   print('Minimum element:', klass.min())
 
-  klass.tree()
+#   klass.tree()
 
-  klass.delete()
-  print('Array after delete/s:', klass.array)
+#   klass.delete()
+#   print('Array after delete/s:', klass.array)
 
-data1();
-print('\n');
-data2();
+# data1();
+# print('\n');
+# data2();
