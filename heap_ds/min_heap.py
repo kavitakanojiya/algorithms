@@ -71,6 +71,9 @@ class MinHeap():
     left = 2*smallest + 1
     right = 2*smallest + 2
 
+    ## Uncomment when debugging ##
+    # print('Smallest: {}; Left: {}; Right: {}; Array: {}'.format(smallest, left, right, self.array))
+
     # Stop if position of children is beyond the length of the array
     if(left > length or right >= length):
       return
@@ -82,6 +85,10 @@ class MinHeap():
     # Considers the left child as the smallest if it is smaller than the current element which is now the right element
     if(left < length and self.array[left] < self.array[smallest]):
       smallest = left
+
+    # If the smallest is still points to the current position, then there's nothing to swap. Return.
+    if(smallest == current_position):
+      return
 
     # Swap with the current element with the child only if the child is greater
     self.array[smallest], self.array[current_position] = self.array[current_position], self.array[smallest]
@@ -116,38 +123,10 @@ class MinHeap():
       # Perform this recursively until the root node so the heap is balanced
       self.insert_heapify(parent, length)
 
-# def data1():
-#   klass = MinHeap()
-#   klass.insert(3)
-#   klass.insert(1)
-#   klass.insert(2)
-#   klass.insert(0)
-#   klass.insert(-1)
-#   print('Array after all inserts:', klass.array)
-
-#   print('Minimum element:', klass.min())
-
-#   klass.tree()
-
-#   klass.delete()
-#   print('Array after delete/s:', klass.array)
-
-# def data2():
-#   klass = MinHeap()
-#   klass.insert(5)
-#   klass.insert(10)
-#   klass.insert(9)
-#   klass.insert(8)
-#   klass.insert(7)
-#   print('Array after all inserts:', klass.array)
-
-#   print('Minimum element:', klass.min())
-
-#   klass.tree()
-
-#   klass.delete()
-#   print('Array after delete/s:', klass.array)
-
-# data1();
-# print('\n');
-# data2();
+  def swap_minimum(self, element):
+    """
+    Instead of popping out the minimum from the heap (which takes O(1) for delete and O(logN) for organizing) and then inserting the element (which takes another O(logN)),
+    We, now, replace the minimum with the new element so that the time to rebalancing the heap is saved. 
+    """
+    self.array[0] = element
+    self.delete_heapify(0, len(self.array))
